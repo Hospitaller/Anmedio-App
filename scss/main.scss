@@ -1,0 +1,492 @@
+@import "fonts";
+@import "libs";
+@import "vars";
+@import "media";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	color: #fff;
+}
+
+body {
+	background-color: #71bfff;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $segoe-font;
+	overflow-x: hidden;
+	input,
+	textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+.container {
+	padding-left: 0;
+	padding-right: 0;
+	position: relative;
+	top: 50vh;
+	left: -1vh;
+	display: flex;
+	width: 1160px;
+	height: 718px;
+	margin-top: -359px;
+	@include xl {
+		max-width: 540px;
+	}
+	@include xxl {
+		max-width: 540px;
+	}
+}
+
+.controlSide {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 580px;
+	height: 718px;
+	background-color: #e1f4ff;
+}
+
+.viewSide {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 580px;
+	height: 718px;
+	background-color: #fff;
+}
+
+.sliderMainBlock {
+	text-align: center;
+	width: 500px;
+	height: 272px;
+	background-color: #fff;
+}
+
+.controlHead {
+	margin-left: 20px;
+}
+
+.controlBodyMainBlock,
+.controlHeadMainBlock {
+	position: relative;
+	width: 240px;
+	height: 90px;
+	background-color: #ffffff;
+}
+
+#sliderFront {
+	margin: 40px 0 20px 0;
+	-webkit-appearance: none;
+	width: 420px;
+	height: 4px;
+	background: #d1e3f2;
+	border: none;
+	transition: .1s;
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		width: 14px;
+		height: 28px;
+		background: #006bcc;
+		border-radius: 18px;
+		cursor: pointer;
+		transition: .1s;
+		&:hover {
+			background: #008bcc;
+		}
+	}
+}
+
+.sliderInfo {
+	margin: 0 40px;
+}
+
+.divider {
+	width: 421px;
+	height: 1px;
+	border: 1px solid #f7f7f7;
+	margin: 40px auto;
+}
+
+.sliderSlogan {
+	width: 337px;
+	text-align: justify;
+	margin: 0 auto;
+	font-weight: 600;
+	:before {
+		content: url("../img/slogan.png");
+		margin-left: -38px;
+		padding-right: 10px;
+	}
+}
+
+.controlBodyMainBlock,
+.controlHeadMainBlock {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.bordered{
+	border:3px solid #006bcc;
+}
+
+.body1,
+.body2,
+.body3,
+.head1,
+.head2,
+.head3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 8px;
+	border: 1px solid #d6d6d6;
+	position: relative;
+	&:hover {
+		border: 3px solid #006bcc;
+		cursor: pointer;
+	}
+}
+
+.body1,
+.body2,
+.body3 {
+	padding-top: 10px;
+}
+
+.body1, .head1{
+	border: 3px solid #006bcc;
+}
+
+.cloud {
+	position: relative;
+	top: -40px;
+	left: 180px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(1);
+	transition: 0.2s;
+}
+
+.tags {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-color: #006bcc;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.tagsSizeS {
+	transform: scale(1);
+	transition: 0.2s;
+}
+
+.tagsSizeM {
+	transform: scale(0.9);
+	transition: 0.2s;
+}
+
+.tagsSizeL {
+	transform: scale(0.8);
+	transition: 0.2s;
+}
+
+.defSize{
+	width: 62px;
+    height: 36px;
+}
+
+.tagHTML {
+	width: 82px;
+	height: 42px;
+	font-size: 18px;
+	top: 0;
+	left: -150px;
+}
+
+.tagCSS {
+	width: 47px;
+	height: 32px;
+	top: 4px;
+	left: -50px;
+}
+
+.tagSQL {
+	width: 38px;
+	height: 24px;
+	font-size: 10px;
+	top: -4px;
+	left: 4px;
+}
+
+.tagAdaptive {
+	width: 82px;
+	height: 32px;
+	font-size: 14px;
+	top: 55px;
+	left: -180px;
+}
+
+.tagBaseJS {
+	width: 97px;
+	height: 43px;
+	font-size: 18px;
+	top: 50px;
+	left: -80px;
+}
+
+.tagWebpack {
+	width: 99px;
+	height: 38px;
+	font-size: 16px;
+	top: 30px;
+	left: 30px;
+}
+
+.tagTDD {
+	width: 50px;
+	height: 31px;
+	font-size: 14px;
+	top: -11px;
+	left: 50px;
+}
+
+.tagJS {
+	width: 27px;
+	height: 25px;
+	font-size: 9px;
+	top: 165px;
+	left: 55px;
+}
+
+.tagCanvas {
+	width: 90px;
+	height: 41px;
+	font-size: 18px;
+	top: 156px;
+	left: -52px;
+}
+
+.tagSVG {
+	width: 47px;
+	height: 30px;
+	font-size: 14px;
+	top: 150px;
+	left: -123px;
+}
+
+.tagBash {
+	@extend %defSize;
+	font-size: 16px;
+	top: 120px;
+	left: 145px;
+}
+
+.tagCICD {
+	@extend %defSize;
+	font-size: 16px;
+	top: 120px;
+	left: 75px;
+}
+
+.tagReact {
+	@extend %defSize;
+	font-size: 16px;
+	top: 162px;
+	left: 98px;
+}
+
+.tagD3 {
+	@extend %defSize;
+	font-size: 16px;
+	top: 30px;
+	left: 135px;
+}
+
+.tagVue {
+	@extend %defSize;
+	font-size: 16px;
+	top: -44px;
+	left: -107px;
+}
+
+.tagSPA {
+	@extend %defSize;
+	font-size: 16px;
+	top: 4px;
+	left: -221px;
+}
+
+.tagESLint {
+	@extend %defSize;
+	font-size: 14px;
+	top: 105px;
+	left: -155px;
+}
+
+.tagGulp {
+	width: 68px;
+	height: 41px;
+	font-size: 18px;
+	top: 105px;
+	left: -65px;
+}
+
+.tagGit {
+	width: 31px;
+	height: 24px;
+	font-size: 9px;
+	top: 80px;
+	left: 30px;
+}
+
+.tagPug {
+	width: 47px;
+	height: 32px;
+	font-size: 14px;
+	top: 80px;
+	left: 75px;
+}
+
+.tagSASS {
+	width: 44px;
+	height: 25px;
+	font-size: 10px;
+	top: 113px;
+	left: 18px;
+}
+
+.tagES6 {
+	@extend %defSize;
+	font-size: 16px;
+	top: -42px;
+	left: -184px;
+}
+
+.tagThreeJs {
+	@extend %defSize;
+	font-size: 16px;
+	top: 76px;
+	left: 138px;
+}
+
+.tagWebGL {
+	@extend %defSize;
+	font-size: 16px;
+	top: 99px;
+	left: -236px;
+}
+
+.tagChromeExtensions {
+	width: 152px;
+	height: 36px;
+	font-size: 16px;
+	top: -55px;
+	left: -33px;
+}
+
+.tagNode {
+	width: 65px;
+	height: 36px;
+	font-size: 16px;
+	top: -15px;
+	left: 109px;
+}
+
+.tagExpress {
+	width: 65px;
+	height: 36px;
+	font-size: 16px;
+	top: 202px;
+	left: 146px;
+}
+
+.tagArchitecture {
+	width: 100px;
+	height: 36px;
+	font-size: 16px;
+	top: 189px;
+	left: -183px;
+}
+
+.disabledTag {
+	display: none;
+}
+
+.enabledTag {
+	display: flex;
+}
+.active::before{
+	content: " ";
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background-color: #006bcc;
+	border-radius: 5px;
+	top: 6px;
+	left: 6px;
+}
+
+/*HERO BLOCK*/
+.hero {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	top: 15px;
+}
+
+.heroBody {
+	display: flex;
+	justify-content: center;
+}
+
+.heroFace {
+	position: absolute;
+	top: 200px;
+
+}
+
+.table {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 346px;
+}

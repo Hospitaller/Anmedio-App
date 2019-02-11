@@ -1,0 +1,17 @@
+@import "vars";
+
+$xl-width: 768px;
+$xxl-width: 992px;
+$big-width: 1200px;
+
+@mixin xl {
+  @media (min-width: #{$xl-width}) and (max-width: #{$xxl-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+    @media (min-width: #{$xxl-width}) and (max-width: #{$big-width - 1px}) {
+      @content;
+    }
+  }
